@@ -36,6 +36,9 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    if (localStorage.getItem('Auth')) {
+      this.router.navigate(['/home']);
+    }
     this.buildForm();
     if (this.router.url === '/signup') {
       this.submitButtonText = 'Sign up';

@@ -20,7 +20,9 @@ export class HomeComponent implements OnDestroy {
   }
 
   logout(): void {
-    this.authSubscription = this.authService.logout().subscribe();
+    this.authSubscription = this.authService.logout().subscribe(() => {
+      localStorage.removeItem('Auth');
+    });
   }
 
   ngOnDestroy(): void {
