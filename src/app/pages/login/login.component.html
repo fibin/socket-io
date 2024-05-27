@@ -23,7 +23,7 @@
             </p>
 
             <div class="button">
-                <button *ngIf="!isLoginPage" mat-button (click)="signUp()">Sign up</button>
+                <button *ngIf="isLoginPage" mat-button (click)="signUp()">Sign up</button>
                 <button type="submit" mat-button>{{submitButtonText}}</button>
             </div>
         </form>
